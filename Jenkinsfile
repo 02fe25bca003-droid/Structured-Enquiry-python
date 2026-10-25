@@ -5,21 +5,23 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                echo 'Repository checked out by Jenkins'
             }
         }
 
         stage('Check Python') {
             steps {
-                sh 'python3 --version'
+                bat 'python --version'
             }
         }
 
         stage('Verify Project Files') {
             steps {
-                sh 'pwd'
-                sh 'ls -la'
+                bat 'echo Current workspace:'
+                bat 'cd'
+                bat 'dir'
             }
         }
     }
 }
+
