@@ -11,7 +11,7 @@ pipeline {
 
         stage('Check Python') {
             steps {
-                bat 'python --version'
+                bat '"C:\\Users\\Atharva\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" --version'
             }
         }
 
@@ -24,4 +24,3 @@ pipeline {
         }
     }
 }
-
